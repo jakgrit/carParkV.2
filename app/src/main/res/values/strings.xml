@@ -8,4 +8,13 @@
     <string name="username_txt">Username</string>
     <string name="password_txt">Password</string>
     <string name="Carpark">CarPark</string>
+    <string name="slot1">Empty</string>
+    <string name="slt2">Empty</string>
+    <string name="slt3">Empty</string>
+    <string name="carid_txt"></string>
+    <string name="firstname_txt"></string>
+    <string name="lastname_txt"></string>
+    <string name="CarId">CarID</string>
+    <string name="firstName">Firstname</string>
+    <string name="lastName">Lastname</string>
 </resources>
