@@ -33,16 +33,23 @@ class CarParkFragment : Fragment() {
             slt2.setOnClickListener { selectItem(binding, "2") }
             slt3.setOnClickListener { selectItem(binding, "3") }
 
+            saveBtn.setOnClickListener { initValue(binding, obj) }
+        }
+
+        hideComponent(binding)
+
+        return binding.root
+    }
+
+    private fun hideComponent(fragment: FragmentCarparkBinding){
+        fragment.apply {
+
             deleteBtn.visibility = View.INVISIBLE
             saveBtn.visibility = View.INVISIBLE
             carIdTxt.visibility = View.INVISIBLE
             firstNameTxt.visibility = View.INVISIBLE
             lastNameTxt.visibility = View.INVISIBLE
-
-            saveBtn.setOnClickListener { initValue(binding, obj) }
         }
-
-        return binding.root
     }
 
     private fun selectItem(fragment:FragmentCarparkBinding , slot: String){
@@ -85,6 +92,11 @@ class CarParkFragment : Fragment() {
                 car3 = car
             }
         }
+
+        Toast.makeText(activity, slt, Toast.LENGTH_SHORT).show()
     }
 
+    private fun showText(){
+
+    }
 }
