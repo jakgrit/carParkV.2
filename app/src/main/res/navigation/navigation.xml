@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment2">
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="buu.informatics.s59160002.carparkwithlogin.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_carParkFragment2"
+            app:destination="@id/carParkFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/carParkFragment2"
+        android:name="buu.informatics.s59160002.carparkwithlogin.CarParkFragment"
+        android:label="fragment_carpark"
+        tools:layout="@layout/fragment_carpark" />
+    <fragment
+        android:id="@+id/infoFragment2"
+        android:name="buu.informatics.s59160002.carparkwithlogin.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+</navigation>

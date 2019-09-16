@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import buu.informatics.s59160002.carparkwithlogin.databinding.FragmentLoginBinding
 
 /**
@@ -19,6 +20,10 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentLoginBinding>(inflater, R.layout.fragment_login, container, false)
+
+        binding.loginBtn.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_loginFragment2_to_carParkFragment2)
+        }
 
         return binding.root
     }
