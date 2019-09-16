@@ -19,7 +19,7 @@
         android:label="fragment_carpark"
         tools:layout="@layout/fragment_carpark" />
     <fragment
-        android:id="@+id/infoFragment2"
+        android:id="@+id/infoFragment"
         android:name="buu.informatics.s59160002.carparkwithlogin.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
