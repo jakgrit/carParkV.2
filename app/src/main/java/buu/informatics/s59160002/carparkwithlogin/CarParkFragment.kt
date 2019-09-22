@@ -61,9 +61,18 @@ class CarParkFragment : Fragment() {
             lastNameTxt.visibility = View.VISIBLE
 
             saveBtn.setOnClickListener { initValue(fragment, slot) }
+            deleteBtn.setOnClickListener { removeObj(fragment, slot) }
         }
 
         obj = slot
+
+        if (slot.equals("1")){
+            showText(fragment, car1)
+        }else if(slot.equals("2")){
+            showText(fragment, car2)
+        }else{
+            showText(fragment, car3)
+        }
     }
 
     //Initial Value
@@ -84,19 +93,53 @@ class CarParkFragment : Fragment() {
         when (slt) {
             "1" -> {
                 car1 = car
+                Toast.makeText(activity, slt + car1.firstName, Toast.LENGTH_SHORT).show()
             }
             "2" -> {
+
                 car2 = car
+                Toast.makeText(activity, slt + car2.firstName, Toast.LENGTH_SHORT).show()
             }
             "3" -> {
+
                 car3 = car
+                Toast.makeText(activity, slt + car3.firstName, Toast.LENGTH_SHORT).show()
             }
         }
 
-        Toast.makeText(activity, slt, Toast.LENGTH_SHORT).show()
+        hideComponent(binding)
+
     }
 
-    private fun showText(){
+    private fun removeObj(binding: FragmentCarparkBinding, slt: String){
+        var car: Car = Car()
+
+        car.carId = ""
+        car.firstName = ""
+        car.lastName = ""
+
+        when (slt){
+            "1" ->{
+                car1 = car
+                showText(binding, car1)
+            }
+            "2" ->{
+                car2 = car
+                showText(binding, car2)
+            }
+            else ->{
+                car3 = car
+                showText(binding, car3)
+            }
+        }
+    }
+
+    //showValue
+    private fun showText(binding: FragmentCarparkBinding, obj: Car){
+
+        binding.carIdTxt.setText(obj.carId)
+        binding.firstNameTxt.setText(obj.firstName)
+        binding.lastNameTxt.setText(obj.lastName)
 
     }
 }
